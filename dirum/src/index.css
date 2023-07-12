@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  --redColor: #f00000;
+  --whiteColor: #ffffff;
+  --blackColor: #000000;
+  --lightBlue: #6360ff;
+  --lightSilver: #d9d9d9;
+  --darkGraynigh: #7a7a7a;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+.img-fluid {
+  max-width: 100%;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.col-md-3 {
+  width: 25%;
+  padding: 0 10px;
+}
+.col-md-4 {
+  width: 33.33%;
+  padding: 0 10px;
+}
+.col-md-6 {
+  width: 50%;
+  padding: 0 10px;
+}
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.mz-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.sectionPadding {
+  padding: 50px 0;
+}
+.formControl {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: none;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 14px;
+  outline: none;
+  padding: 12px 14px;
+  width: 100%;
+}
+.formLabel {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+.btn {
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  color: var(--blackColor);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 14px 30px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.btnPrimary {
+  background-color: var(--lightBlue);
+  color: var(--whiteColor);
+}
+/* -------------------------------------------------- */
+.loginCard {
+  background-color: var(--whiteColor);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+.loginInput h4 {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--lightBlue);
+  margin-bottom: 4px;
+}
+.loginInput p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+/* -------------------------------------------- */
+.dashboardWrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.dashboardWrapper .sideBarContainer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: var(--lightBlue);
+  border-right: 2px solid var(--lightBlue);
+}
+
+.dashboardWrapper .dashboardContent {
+  margin-left: 250px;
+  width: 100%;
+  background: #f3f6fb;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.dashboardWrapper .sideBarContainer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboardWrapper .sideBarContainer ul li {
+  position: relative;
+  padding: 10px 10px;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--whiteColor);
+  cursor: pointer;
+  margin-bottom: 2px;
+  transition: 0.3s ease-in-out;
+}
+
+.dashboardWrapper .sideBarContainer ul li:hover {
+  font-weight: 600;
+}
+.dashboardWrapper .sideBarContainer ul li::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--whiteColor);
+  z-index: 1;
+  opacity: 0.1;
+  transition: 0.2s ease-in-out;
+}
+
+.dashboardWrapper .sideBarContainer ul li:hover::before {
+  width: 100%;
+}
+.dashboardWrapper .sideBarContainer ul li a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.sideBarContainer .logo {
+  background: var(--whiteColor);
+  width: 94%;
+  height: 100px;
+  object-fit: contain;
+  margin: 6px auto 20px auto;
+  display: block;
+  border-radius: 6px;
+}
+/* ---------------------------------------- */
+.msgContainer {
+  margin-bottom: 40px;
+  padding-left: 10px;
+}
+.msgContainer h5 {
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: var(--lightBlue);
+}
+.msgContainer p {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--blackColor);
+}
+/* ------------------------------------------ */
+.singleDashboardCard {
+  position: relative;
+  padding: 80px 20px;
+  background: var(--whiteColor);
+  margin-bottom: 20px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.12);
+  border: 1.5px solid var(--redColor);
+}
+.singleDashboardCard::before {
+  position: absolute;
+  content: "";
+  bottom: -50px;
+  right: -50px;
+  width: 100px;
+  height: 100px;
+  background-color: var(--redColor);
+  border-radius: 100px;
+  opacity: 0.8;
+}
+.singleDashboardCard .countSpan {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  color: var(--whiteColor);
+}
+
+.singleDashboardCard .textSpan {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--redColor);
+}
+.singleDashboardCard a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.singleDashboardCard .iconSpan {
+  position: absolute;
+  left: 14px;
+  top: 10px;
+  font-size: 60px;
+  font-weight: 600;
+  color: var(--lightBlue);
+}
+.option {
+  display: flex;
+  column-gap: 10px;
+  margin-bottom:  20px;
+}
+.option .radioBtn {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 50px;
+}
